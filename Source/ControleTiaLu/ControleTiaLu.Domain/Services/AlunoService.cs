@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ControleTiaLu.Domain.Services
 {
-    class TurmaServices
+    class AlunoService
     {
     }
 }

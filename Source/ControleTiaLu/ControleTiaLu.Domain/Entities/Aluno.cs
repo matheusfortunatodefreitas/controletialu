@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace ControleTiaLu.Domain.Entities
 {
-    class Aluno
+    public class Aluno
     {
+        public int Codigo { get; set; }
+        public string Nome { get; set; }
+        public int Idade { get; set; }
+        public string  Telefone { get; set; }
+        public string NomeResponsavel { get; set; }
+
+
     }
 }
