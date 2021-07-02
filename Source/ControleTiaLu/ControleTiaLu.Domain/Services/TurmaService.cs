@@ -6,10 +6,9 @@ namespace ControleTiaLu.Domain.Services
     public class TurmaService
     {
 
-
         public void CriarTurma(Turma turma) 
         {
-            turma.Codigo = 1;
+            turma.AtribuirCodigo(1);
         }
 
         public void AssociarAlunosTurma(Turma turma, List<Aluno> alunos)

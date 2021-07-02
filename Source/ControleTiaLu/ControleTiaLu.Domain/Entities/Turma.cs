@@ -1,44 +1,69 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControleTiaLu.Domain.Entities
 {
-    public class Turma
+    public class Turma : EntityBase
     {
-        public Turma()
-        {
-
-        }
+        private List<Aluno> _alunos = new List<Aluno>();
 
         public Turma(string descricao, DateTime horaInicial, DateTime horaFinal)
         {
             Descricao = descricao;
             HoraInicial = horaInicial;
             HoraFinal = horaFinal;
+
+            if (!Validate())
+            {
+                throw new Exception("Informações de turma inválida");
+            }
+
         }
 
-        public int Codigo { get; set; }
-        public string Descricao { get; set; }
-        public DateTime HoraInicial { get; set; }
-        public DateTime HoraFinal { get; set; }
-        public List<Aluno> Alunos { get; set; } = new List<Aluno>();
+        public string Descricao { get; private set; }
+        public DateTime HoraInicial { get; private set; }
+        public DateTime HoraFinal { get; private set; }
+        public IEnumerable<Aluno> Alunos { get { return _alunos; } } 
+
+        public void AlterarDescricao(string descricao) 
+        {
+            if (!ValidarDescricao(descricao))
+            {
+                throw new Exception("Descrição inválida!");
+            }
+
+            Descricao = descricao;
+        }
 
         public void AdicionarAluno(Aluno aluno) 
         {
-            if (Alunos.Any(al => al.Nome.Equals(aluno.Nome) && al.NomeResponsavel.Equals(aluno.NomeResponsavel) && al.Telefone.Equals(aluno.Telefone)))
+            if (_alunos.Any(al => al.Nome.Equals(aluno.Nome) && al.NomeResponsavel.Equals(aluno.NomeResponsavel) && al.Telefone.Equals(aluno.Telefone)))
             {
                 throw new Exception("Aluno já cadastrado!");
             }
 
-            Alunos.Add(aluno);
+            _alunos.Add(aluno);
         }
 
         public void RemoverAluno(int codigoAluno) 
         {
-            Alunos.RemoveAll(aluno => aluno.Codigo == codigoAluno);
+            _alunos.RemoveAll(aluno => aluno.Codigo == codigoAluno);
+        }
+
+        public bool Validate() 
+        {
+            var validarDesc = ValidarDescricao(Descricao);
+            var validarHoraInicial = HoraInicial != DateTime.MinValue;
+            var validarHoraFinal = HoraFinal != DateTime.MinValue;
+            var validarHoras = HoraInicial < HoraFinal;
+
+            return validarDesc && validarHoraInicial && validarHoraFinal && validarHoras;
+        }
+
+        private bool ValidarDescricao(string descricao) 
+        {
+            return !string.IsNullOrEmpty(descricao.Trim()) && descricao.Trim().Length >= 5;
         }
     }
 }
