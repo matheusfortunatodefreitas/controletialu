@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleTiaLu.Domain", "ControleTiaLu.Domain\ControleTiaLu.Domain.csproj", "{0217C08E-8FDC-418A-A692-B1BC7E0B09B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleTiaLu.Persistence", "ControleTiaLu.Persistence\ControleTiaLu.Persistence.csproj", "{CA5D7B97-03FF-4A67-8A88-185B6B7CE7F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0217C08E-8FDC-418A-A692-B1BC7E0B09B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0217C08E-8FDC-418A-A692-B1BC7E0B09B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0217C08E-8FDC-418A-A692-B1BC7E0B09B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0217C08E-8FDC-418A-A692-B1BC7E0B09B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA5D7B97-03FF-4A67-8A88-185B6B7CE7F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA5D7B97-03FF-4A67-8A88-185B6B7CE7F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA5D7B97-03FF-4A67-8A88-185B6B7CE7F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA5D7B97-03FF-4A67-8A88-185B6B7CE7F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CB92A7D-8F72-46F8-8FAB-CAC918492293}
+	EndGlobalSection
+EndGlobal
