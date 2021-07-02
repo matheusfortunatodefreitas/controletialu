@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleTiaLu.Domain", "Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleTiaLu.Persistence", "ControleTiaLu.Persistence\ControleTiaLu.Persistence.csproj", "{CA5D7B97-03FF-4A67-8A88-185B6B7CE7F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleTiaLu.Web", "ControleTiaLu.Web\ControleTiaLu.Web.csproj", "{6760E51F-B8F2-4E38-934F-410ABAC55642}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleTiaLu.Domain.Test", "ControleTiaLu.Domain.Test\ControleTiaLu.Domain.Test.csproj", "{9A08DFA1-31C5-41EC-A922-01E094822A87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{CA5D7B97-03FF-4A67-8A88-185B6B7CE7F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA5D7B97-03FF-4A67-8A88-185B6B7CE7F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA5D7B97-03FF-4A67-8A88-185B6B7CE7F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6760E51F-B8F2-4E38-934F-410ABAC55642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6760E51F-B8F2-4E38-934F-410ABAC55642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6760E51F-B8F2-4E38-934F-410ABAC55642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6760E51F-B8F2-4E38-934F-410ABAC55642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A08DFA1-31C5-41EC-A922-01E094822A87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A08DFA1-31C5-41EC-A922-01E094822A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A08DFA1-31C5-41EC-A922-01E094822A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A08DFA1-31C5-41EC-A922-01E094822A87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
